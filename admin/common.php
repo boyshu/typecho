@@ -3,9 +3,7 @@ if (!defined('__DIR__')) {
     define('__DIR__', dirname(__FILE__));
 }
 
-if (!defined('__TYPECHO_ADMIN__')) {
-        define('__TYPECHO_ADMIN__', true);
-}
+define('__TYPECHO_ADMIN__', true);
 
 /** 载入配置文件 */
 if (!defined('__TYPECHO_ROOT_DIR__') && !@include_once __DIR__ . '/../config.inc.php') {
