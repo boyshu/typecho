@@ -132,7 +132,6 @@ $this->need('header.php');
         > </span><a href="<?php $this->permalink() ?>" class="yinyong">
         <?php $this->title() ?>
         </a> </p>
-      <p class="tag-title sousuo"><i class="fa fa-search"></i> 查询收录情况： <span><?php echo baidu_record() ?></span></p>
        <div style="display: none;" id="animatedModal2" class="animated-modal">
         <h3 class="wxscan postqr">跨屏阅读</h3>
         <div class="wxscanimg">

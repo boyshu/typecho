@@ -1616,33 +1616,6 @@ function welcome_hello() {
 	}
 }
 
- //百度收录查询 
-function baidu_record() {
-    $url='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-
-    if(checkBaidu($url)==1)
-    {echo "<a rel=\"external nofollow\" title=\"点击查看收录！\" target=\"_blank\" 
-    href=\"https://www.baidu.com/s?wd=$url\">百度已收录</a>";
-    }
-    else
-    {echo "<a style=\"color:red;\" rel=\"external nofollow\" title=\"点击提交收录！\" target=\"_blank\" 
-    href=\"http://zhanzhang.baidu.com/sitesubmit/index?sitename=$url\">百度未收录</a>";}
-    }
-
-       function checkBaidu($url) { 
-        $url = 'https://www.baidu.com/s?wd=' . urlencode($url); 
-        $curl = curl_init(); 
-        curl_setopt($curl, CURLOPT_URL, $url); 
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1); 
-        $rs = curl_exec($curl); 
-        curl_close($curl); 
-        if (!strpos($rs, '没有找到')) { //没有找到说明已被百度收录 
-            return 1; 
-        } else { 
-            return -1; 
-        } 
-    }
-
 /**
  * 加载时间
  * @return bool
